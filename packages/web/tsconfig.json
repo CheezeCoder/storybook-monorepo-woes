@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "dist",
+    "paths": {},
+    "resolveJsonModule": true
+  },
+  "references": [
+    {
+      "path": "../ui"
+    },
+    {
+      "path": "../utils"
+    }
+  ]
+}

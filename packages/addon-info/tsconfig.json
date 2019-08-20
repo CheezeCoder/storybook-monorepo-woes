@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "module": "esnext",
+    "target": "es5",
+    "declaration": true,
+    "jsx": "react",
+    "sourceMap": true,
+    "outDir": "dist",
+    "composite": true
+  },
+  "references": [
+    {
+      "path": "../ui"
+    }
+  ]
+}

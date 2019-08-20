@@ -1,0 +1,6 @@
+node_modules
+.jest-*
+lib
+dist/
+*.tsbuildinfo
+**/*.tsbuildinfo

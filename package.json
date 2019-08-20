@@ -1,0 +1,25 @@
+{
+  "name": "typescript-react-jest-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "repository": "https://gitlab.com/CheezeKoder/typescript-react-jest-monorepo.git",
+  "author": "Chris Shields <ChrisShieldsEdmonton@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:utils && yarn build:ui && yarn build:web && yarn build:addon",
+    "build:ui": "yarn workspace @trjm/ui build",
+    "build:web": "yarn workspace @trjm/web build",
+    "build:utils": "yarn workspace @trjm/utils build",
+    "build:addon": "yarn workspace @trjm/addon-info build",
+    "clean": "yarn clean:modules & yarn clean:lib & yarn clean:tsbuild && yarn clean:dist",
+    "clean:modules": "find . -name \"node_modules\" -exec rm -rf '{}' +",
+    "clean:lib": "find . -name \"lib\" -exec rm -rf '{}' +",
+    "clean:tsbuild": "find . -name \"tsconfig.tsbuildinfo\" -exec rm -rf '{}' +",
+    "clean:dist": "find . -name \"dist\" -exec rm -rf '{}' +",
+    "start": "yarn workspace @trjm/web start",
+    "storybook": "yarn workspace @trjm/storybook storybook"
+  },
+  "workspaces": [
+    "packages/**"
+  ]
+}

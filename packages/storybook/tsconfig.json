@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "sourceMap": true
+  },
+  "include": ["./stories"],
+  "references": [
+    {
+      "path": "../ui"
+    }
+  ]
+}

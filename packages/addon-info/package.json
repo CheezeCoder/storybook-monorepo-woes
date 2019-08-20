@@ -1,0 +1,23 @@
+{
+  "name": "@trjm/addon-info",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/src/index.d.ts",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.2",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@trjm/ui": "*",
+    "@storybook/addons": "^5.2.0-beta.37",
+    "@storybook/api": "^5.2.0-beta.37",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

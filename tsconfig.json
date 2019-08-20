@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./packages",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "@trjm/*": ["./*/src"]
+    }
+  }
+}
