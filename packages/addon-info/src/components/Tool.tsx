@@ -5,7 +5,7 @@ import { REQUEST_PROPS_CHANGE, ADDON_ID } from "../constants";
 
 export const Tool: React.FC<{}> = ({}) => {
   const [selected, setSelected] = useAddonState<boolean>(ADDON_ID, true);
-  const emit = () =>
+  const emit =
     useChannel({
       [REQUEST_PROPS_CHANGE]: (newState: boolean) => setSelected(newState)
     });
@@ -23,7 +23,7 @@ export const Tool: React.FC<{}> = ({}) => {
           key="test-info"
           title="Show test component"
           active={selected}
-          onClick={emit}
+          onClick={() => emit(REQUEST_PROPS_CHANGE)}
         >
           <Icons icon="info" />
         </IconButton>
