@@ -2,27 +2,9 @@
 
 Testing repo for storybook problems.
 
-### An issue with writing your own storybook addon within a yarn typescript monorepo.
+### An issue with writing CSF style stories with the addon-knobs.
 
-The purpose of the test addon is to show or hid a component at the bottom of a story depending on the state of a toolbar button. However whenever the toolbar button is pressed we get an error exclaiming that:
-
-```
-vendors~main.4a74125e061c6152166f.bundle.js:83880 Uncaught Invariant Violation: Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
-1. You might have mismatching versions of React and the renderer (such as React DOM)
-2. You might be breaking the Rules of Hooks
-3. You might have more than one copy of React in the same app
-See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
-    at http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:83880:26
-    at Object.throwInvalidHookError (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:83883:5)
-    at useContext (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:107890:21)
-    at useStorybookApi (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:4555:44)
-    at useChannel (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:4590:13)
-    at emit (http://localhost:63500/main.1a3abdd9125454e6749a.bundle.js:28:81)
-    at HTMLUnknownElement.callCallback (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:69202:14)
-    at Object.invokeGuardedCallbackDev (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:69252:16)
-    at invokeGuardedCallback (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:69309:31)
-    at invokeGuardedCallbackAndCatchFirstError (http://localhost:63500/vendors~main.4a74125e061c6152166f.bundle.js:69323:25)
-```
+The purpose of this repo is to demonstrate how writing stories in the new CSF format will break the @storybook/addon-knobs functionality when switching between the docs and canvas view via the toolbar.
 
 ## To get started:
 
@@ -41,3 +23,13 @@ then
 ```
 yarn storybook
 ```
+
+### To reproduce the issue:
+
+1.  Click on UIComponent A
+2.  Change the knob setting to small or big.
+3.  Notice the knobs functionality works.
+4.  Switch to the docs view via the `Docs` button in the toolbar.
+5.  Switch back to the canvas view via the `Canvas` button in the toolbar.
+6.  Notice the knobs functionality now does not work.
+7.  Reloading or switching stories fixes it.
