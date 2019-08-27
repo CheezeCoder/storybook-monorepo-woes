@@ -1,1 +1,1 @@
-import "@trjm/addon-info/dist/register.js";
+import "@storybook/addon-knobs/register";

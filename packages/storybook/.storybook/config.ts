@@ -1,12 +1,6 @@
 import { configure, addDecorator } from "@storybook/react";
-import { withTestComponent } from "@trjm/addon-info/dist/index.js";
+import { withKnobs } from "@storybook/addon-knobs";
 
-const req = require.context("../stories", true, /\.stories\.tsx$/);
+addDecorator(withKnobs);
 
-function loadStories() {
-  req.keys().forEach(filename => req(filename));
-}
-
-addDecorator(withTestComponent);
-
-configure(loadStories, module);
+configure(require.context("../stories", true, /\.stories\.(tsx|mdx)$/), module);

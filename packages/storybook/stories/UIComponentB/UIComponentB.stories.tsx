@@ -1,9 +1,9 @@
 import * as React from "react";
 import { UIComponentB } from "@trjm/ui";
-import { storiesOf } from "@storybook/react";
 
-const stories = storiesOf("Components", module);
+export default {
+  title: "UIComponentB",
+  component: UIComponentB
+};
 
-stories.add("UI Component B", () => {
-  return <UIComponentB />;
-});
+export const uIComponentB = () => <UIComponentB />;

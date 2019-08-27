@@ -6,7 +6,7 @@
   "author": "Chris Shields <ChrisShieldsEdmonton@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:utils && yarn build:ui && yarn build:web && yarn build:addon",
+    "build": "yarn build:utils && yarn build:ui && yarn build:web",
     "build:ui": "yarn workspace @trjm/ui build",
     "build:web": "yarn workspace @trjm/web build",
     "build:utils": "yarn workspace @trjm/utils build",

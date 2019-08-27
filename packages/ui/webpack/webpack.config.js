@@ -44,6 +44,12 @@ module.exports = {
           {
             loader: require.resolve("ts-loader"),
             options: { configFile: "../tsconfig.development.json" }
+          },
+          {
+            loader: require.resolve("react-docgen-typescript-loader"),
+            options: {
+              tsconfigPath: path.join(__dirname, "../tsconfig.development.json")
+            }
           }
         ]
       }
